@@ -1,6 +1,6 @@
-<h1>Listing message_deliveries</h1>
+<h1>Listing Message deliveries</h1>
 
-<table>
+<table class="table table-striped">
   <tr>
     <th>Audio file</th>
     <th>Contact</th>
@@ -11,8 +11,8 @@
 
 <% @message_deliveries.each do |message_delivery| %>
   <tr>
-    <td><%= message_delivery.audio_file %></td>
-    <td><%= message_delivery.contact %></td>
+    <td><%= message_delivery.audio_file.name %></td>
+    <td><%= message_delivery.contact.name %></td>
     <td><%= link_to 'Show', message_delivery %></td>
     <td><%= link_to 'Edit', edit_message_delivery_path(message_delivery) %></td>
     <td><%= link_to 'Destroy', message_delivery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
