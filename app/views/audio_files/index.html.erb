@@ -1,0 +1,23 @@
+<h1>Listing audio_files</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @audio_files.each do |audio_file| %>
+  <tr>
+    <td><%= audio_file.name %></td>
+    <td><%= link_to 'Show', audio_file %></td>
+    <td><%= link_to 'Edit', edit_audio_file_path(audio_file) %></td>
+    <td><%= link_to 'Destroy', audio_file, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Audio file', new_audio_file_path %>

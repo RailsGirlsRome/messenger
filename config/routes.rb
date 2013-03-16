@@ -1,4 +1,7 @@
 Messenger::Application.routes.draw do
+  resources :audio_files
+
+
   resources :contacts
 
 
