@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Audio file:</b>
+  <%= @message_delivery.audio_file %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%= @message_delivery.contact %>
+</p>
+
+
+<%= link_to 'Edit', edit_message_delivery_path(@message_delivery) %> |
+<%= link_to 'Back', message_deliveries_path %>

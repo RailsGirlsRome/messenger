@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130316225721) do
+ActiveRecord::Schema.define(:version => 20130316231327) do
 
   create_table "audio_files", :force => true do |t|
     t.string   "name"
@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(:version => 20130316225721) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
+
+  create_table "message_deliveries", :force => true do |t|
+    t.integer  "audio_file_id"
+    t.integer  "contact_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "message_deliveries", ["audio_file_id"], :name => "index_message_deliveries_on_audio_file_id"
+  add_index "message_deliveries", ["contact_id"], :name => "index_message_deliveries_on_contact_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
