@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :audio_file %><br />
-    <%= f.text_field :audio_file %>
+    <%= f.select :audio_file_id, options_from_collection_for_select(AudioFile.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :contact %><br />
-    <%= f.text_field :contact %>
+    <%= f.select :contact_id, options_from_collection_for_select(Contact.all, :id, :name) %>
   </div>
   <div class="actions">
     <%= f.submit %>
