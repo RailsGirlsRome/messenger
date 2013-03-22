@@ -34,8 +34,12 @@ ActiveRecord::Schema.define(:version => 20130316231327) do
   create_table "message_deliveries", :force => true do |t|
     t.integer  "audio_file_id"
     t.integer  "contact_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "xml_file_file_name"
+    t.string   "xml_file_content_type"
+    t.integer  "xml_file_file_size"
+    t.datetime "xml_file_updated_at"
   end
 
   add_index "message_deliveries", ["audio_file_id"], :name => "index_message_deliveries_on_audio_file_id"
