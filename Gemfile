@@ -10,6 +10,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'dotenv'
 gem 'aws-sdk'
+gem 'httparty'
 
 # Console
 gem 'pry-rails'
