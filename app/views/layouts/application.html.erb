@@ -45,13 +45,14 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="#">Messenger</a>
+            <a class="brand" href="/">RailsGirls Messenger</a>
             <div class="container nav-collapse">
               <ul class="nav">
               <% if signed_in? %>
                 <li><%= link_to "Contacts", contacts_path  %></li>
                 <li><%= link_to "Files", audio_files_path  %></li>
                 <li><%= link_to "Message Deliveries", message_deliveries_path %></li>
+                <li><%= link_to "Log out!", destroy_user_session_path, method: :delete %></li>
               <% else %>
                 <li><%= link_to 'Login', new_user_session_path %></li>
                 <li><%= link_to 'Sign up', new_user_registration_path %></li>
@@ -70,7 +71,7 @@
         </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2013</p>
+        <p>&copy; RailsGirls Rome 2013</p>
       </footer>
 
     </div> <!-- /container -->

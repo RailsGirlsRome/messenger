@@ -1,15 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+<h1>Message Delivery detail</h1>
+</div>
 
 <p>
   <b>Audio file:</b>
-  <%= @message_delivery.audio_file %>
+  <%= @message_delivery.audio_file.name %>
 </p>
 
 <p>
   <b>Contact:</b>
-  <%= @message_delivery.contact %>
+  <%= @message_delivery.contact.name %>
 </p>
 
-
-<%= link_to 'Edit', edit_message_delivery_path(@message_delivery) %> |
-<%= link_to 'Back', message_deliveries_path %>
+<%= link_to 'Edit', edit_message_delivery_path(@message_delivery), class: 'btn' %>
+<%= link_to 'Back', message_deliveries_path, class: 'btn' %>

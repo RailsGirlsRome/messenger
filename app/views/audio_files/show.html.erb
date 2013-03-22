@@ -1,10 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header"><h1>Audio File detail </h1></div>
 
-<p>
-  <b>Name:</b>
-  <%= @audio_file.name %>
-</p>
+<div class="row">
+  <div class="span12">
+    <p>
+      <b>Name:</b>
+      <%= @audio_file.name %>
+    </p>
 
+    <p>
+      <b>File Name:</b>
+      <%= @audio_file.file_file_name %>
+    </p>
 
-<%= link_to 'Edit', edit_audio_file_path(@audio_file) %> |
-<%= link_to 'Back', audio_files_path %>
+    <p>
+      <b>File Size:</b>
+      <%= @audio_file.file_file_size %>
+    </p>
+
+    <%= link_to 'Edit', edit_audio_file_path(@audio_file), class: 'btn btn-primary' %>
+    <%= link_to 'Back', audio_files_path, class: 'btn' %>
+  </div>
+</div>
