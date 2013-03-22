@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'devise'
 gem 'paperclip'
 gem 'dotenv'
+gem 'aws-sdk'
 
 # Console
 gem 'pry-rails'
