@@ -36,8 +36,6 @@
   </head>
   <body>
 
-
-
     <div class="container">
       <div class="navbar navbar-top">
         <div class="navbar-inner">
@@ -50,14 +48,20 @@
             <a class="brand" href="#">Messenger</a>
             <div class="container nav-collapse">
               <ul class="nav">
+              <% if signed_in? %>
                 <li><%= link_to "Contacts", "/path1"  %></li>
                 <li><%= link_to "Files", "/path2"  %></li>
                 <li><%= link_to "Message Deliveries", "/path3"  %></li>
+              <% else %>
+                <li><%= link_to 'Login', new_user_session_path %></li>
+                <li><%= link_to 'Sign up', new_user_registration_path %></li>
+              <% end %>
               </ul>
             </div><!--/.nav-collapse -->
           </div>
         </div>
       </div>
+
         <div class="row">
           <div class="span12">
             <%= yield %>
